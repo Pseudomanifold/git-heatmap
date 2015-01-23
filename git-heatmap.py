@@ -28,7 +28,19 @@ for commit in commits.decode().split():
 
     counts[row][col] += 1
 
+print('set size ratio 7.0/24.0\n'
+      'set xrange [-0.5:23.5]\n'
+      'set yrange [-0.5: 6.5]\n'
+      'set xtics 0,1\n'
+      'set ytics 0,1\n'
+      'set xtics offset -0.5,0.0\n'
+      'set tics scale 0,0.001\n'
+      'set mxtics 2\n'
+      'set mytics 2\n'
+      'set grid front mxtics mytics linetype -1 linecolor rgb \'black\'\n'
+      'plot "-" matrix with image notitle')
 for row in range(7):
     for col in range(24):
         print("%d " % counts[row][col], end="")
     print("")
+print("e")
